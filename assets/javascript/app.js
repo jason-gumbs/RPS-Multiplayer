@@ -5,14 +5,14 @@ function blink_text() {
 setInterval(blink_text, 1000);
 //$('.form').hide();
 
-  var config = {
-    apiKey: "AIzaSyATubwxoaZEi6Dan07TLXnM_mo1Xiy9b8s",
-  authDomain: "myfirst-5f0b2.firebaseapp.com",
-    databaseURL: "https://myfirst-5f0b2.firebaseio.com",
-   projectId: "myfirst-5f0b2",
-    storageBucket: "myfirst-5f0b2.appspot.com",
-    messagingSenderId: "1004039478763"
- };
+   var config = {
+    apiKey: "AIzaSyC2DZjWu4XlEXQ9OYs5CjaArRF_7vPp7CY",
+    authDomain: "rpsgame-d268f.firebaseapp.com",
+    databaseURL: "https://rpsgame-d268f.firebaseio.com",
+    projectId: "rpsgame-d268f",
+    storageBucket: "",
+    messagingSenderId: "656169863266"
+  };
   firebase.initializeApp(config);
    var database = firebase.database();
    var player = 0;
