@@ -57,7 +57,7 @@ $("#button").on("click", function(event) {
       
     
 //display your name
-     database.ref('players/name').orderByChild("name").limitToLast(1).on("child_added", function(childSnapshot) {
+     database.ref('players/name').orderByChild("dateAdded").limitToLast(1).on("child_added", function(childSnapshot) {
       // full list of items to the well
       $("#user2").text(childSnapshot.val().name);
       player = childSnapshot.val().player;
