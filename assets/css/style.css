@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+body {
+    background-image: url("../images/gaming.jpg");
+    font-family: 'Bangers', cursive;
+    font-size: 50px;
+    color: black;
+    position: relative;
+ }
+ #container{
+ 	height: 500px;
+ 	width: 300px;
+ 	background-color: white;
+ 	
+ 	position: absolute;
+ 	left: 175px;
+ 	top: 150px;
+
+ }
+  #score{
+ 	height: 500px;
+ 	width: 200px;
+ 	margin-left: 1200px;
+ 	background-color: pink;
+ 	
+ 	position: absolute;
+ 	left: 175px;
+ 	top: 150px;
+
+ }
+ .con{
+ 	margin-left: 800px;
+ }
+ .score{
+ 	margin-left: 1200px;
+ 	color: pink;
+ }
+ #user, #user2{
+ 	text-align: center;
+ 	margin-top: 10px;
+ 	
+ }
+  #top_image{
+ 	text-align: center;
+ 	
+ 	background-color: pink; 
+ 	width: 80%;
+ 	position: absolute;
+ 	left: 25px;
+ 	top: 150px;
+ 	
+ }
+ #icons{
+ 	margin-top: 150px;
+ 	margin-left: 10px;
+ 	height: 80px;
+ 	width: 80px;
+ }
+ h2{
+ 	font-size: 100px;
+ 	
+ }
+  h3{
+ 	font-size: 30px;
+ 	
+ }
+ #head{
+ 	margin-left: 350px;
+ 	margin-top: 30px;
+ 	width: 800px;
+ 	height: auto;
+ 	background-color: pink;
+ 	text-align: center;
+ }
+ form{
+ 	margin-left: 50px;
+ 	padding-bottom: 50px;
+ }
+input[type=text], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#button {
+    background-color: pink;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Bangers', cursive;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+
+</head>
+<body>
+	<div id="head">
+		<h2>ROCK PAPER SCICCORS</h2>
+	</div>
+	<div id="container">
+		<h1 id="user">you</h1>
+		<form class="form">
+  			<h3 class ="blink">Whats your name:</h3>
+  		<input type="text"  id ="namer" name="firstname" placeholder="Enter Name Here"><br>
+  		
+  		<input type="submit"  id ="button" value="Start Game">
+	</form>
+	<div id="top_image">
+	  <h3 class="blink" >Choose your weapon </h3>
+    </div>
+		<img id ="icons" class="choice" value="p" src="assets/images/paper.jpg" >
+		<img id ="icons" class="choice" src="assets/images/rock.jpg" value ="r">
+		<img id ="icons" class="choice" src="assets/images/scissors.png" value ="s">
+
+	</div>
+	<div id="container" class="con">
+		<h1 id="user2">opponent</h1>
+		<img id ="icons" class="choice" src="assets/images/paper.jpg" value="p">
+		<img id ="icons" class="choice" src="assets/images/rock.jpg" value="r">
+		<img id ="icons" class="choice" src="assets/images/scissors.png" value="s">
+
+	</div>
+	<div id="score" >
+		<h1 id="user">Score</h1>
+		
+	</div>
+
+<script type="text/javascript"  src="assets/javascript/app.js"></script>
+<script type="text/javascript"  src="assets/javascript/firebase.js"></script>
+
+
+</body>
+</html>
