@@ -65,7 +65,7 @@ $("#button2").on("click", function(event) {
       $(".form2").hide();
         key++;
        
-         
+         console.log(name2)
       if (key === 3){
          	 database.ref().remove();
          	}
@@ -97,6 +97,7 @@ $("#button2").on("click", function(event) {
       key = childSnapshot.val().key;
       if(player1){
       	 $(".form").hide();
+      	 $(".top_image1 , .choice").show();
 
       }
        
@@ -118,6 +119,7 @@ $("#button2").on("click", function(event) {
       key = childSnapshot.val().key;
       if(player2){
       	 $(".form2").hide();
+      	  $(".top_image2 , .choice2 ").show();
 
       }
        
