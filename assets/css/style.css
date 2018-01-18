@@ -85,7 +85,7 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
-#button {
+#button, #button2 {
     background-color: pink;
     border: none;
     color: black;
