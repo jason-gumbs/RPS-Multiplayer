@@ -20,7 +20,7 @@ body {
   #score{
  	height: 500px;
  	width: 200px;
- 	margin-left: 1200px;
+ 	margin-left: 1100px;
  	background-color: pink;
  	
  	position: absolute;
@@ -32,9 +32,21 @@ body {
  	margin-left: 800px;
  }
  .score{
- 	margin-left: 1200px;
+ 	margin-left: 1000px;
  	color: pink;
  }
+  #score1{
+    height: 500px;
+    width: 200px;
+    margin-left: 300px;
+    background-color: pink;
+    
+    position: absolute;
+    left: 175px;
+    top: 150px;
+
+ }
+ 
  #user, #user2{
  	text-align: center;
  	margin-top: 10px;
@@ -60,14 +72,26 @@ body {
  	font-size: 100px;
  	
  }
-  h3{
+  p{
+ 	font-size: 20px;
+ 	
+ }
+
+   h3{
  	font-size: 30px;
  	
+ }
+ #win{
+    width: 60px;
+    height: 100px;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
  }
  #head{
  	margin-left: 350px;
  	margin-top: 30px;
- 	width: 800px;
+ 	width: 900px;
  	height: auto;
  	background-color: pink;
  	text-align: center;
@@ -97,4 +121,44 @@ input[type=text], select {
     margin: 4px 2px;
     cursor: pointer;
     font-family: 'Bangers', cursive;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.result2{
+    float: left;
 }

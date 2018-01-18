@@ -3,6 +3,7 @@
 <head>
 	<title>Rock Paper Scissors</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
@@ -10,10 +11,10 @@
 </head>
 <body>
 	<div id="head">
-		<h2>ROCK PAPER SCICCORS</h2>
+		<h2>ROCK  &nbsp; PAPER &nbsp;   SCISSORS</h2>
 	</div>
 	<div id="container">
-		<h1 id="user">you</h1>
+		<h1 id="user"></h1>
 		<form class="form">
   			<h3 class ="blink">Whats your name:</h3>
   		<input type="text"  id ="namer" name="firstname" placeholder="Enter Name Here"><br>
@@ -29,7 +30,7 @@
 
 	</div>
 	<div id="container" class="con">
-		<h1 id="user2">opponent</h1>
+		<h1 id="user2"></h1>
 		<form class="form2">
   			<h3 class ="blink">Whats your name:</h3>
   		<input type="text"  id ="namer2" name="firstname" placeholder="Enter Name Here"><br>
@@ -43,14 +44,80 @@
 		<img id ="icons" class="choice2" src="assets/images/scissors.png" value="s">
 
 	</div>
+
+
+	<!-- player 2 score-->
+
 	<div id="score" >
 		<h1 id="user">Score</h1>
-		
+	<div id= "win">	
+		<p class= "">Win</p>
+		<p class= "totalwin"></p>
 	</div>
+	<div id= "win">	
+		<p class= "">lose</p>
+
+		<p class= "totallose"></p>
+	</div>
+	<div id= "win">	
+		<p class= "">Tie</p>
+		<p class= "totaltie"></p>
+	</div>
+	</div>
+	<!-- player 1 score-->
+	<div id="score1" >
+		<h1 id="user">Score</h1>
+	<div id= "win">	
+		<p class= "">Win</p>
+		<p class= "totalwin1"></p>
+	</div>
+	<div id= "win">	
+		<p class= "">lose</p>
+<p class= "totallose1"></p>
+	</div>
+	<div id= "win">	
+		<p class= "">Tie</p>
+		<p class= "totaltie1"></p>
+	</div>
+
+<audio id="myAudio">
+  <source src="assets/images/blop.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<audio id="myAudio2">
+  <source src="assets/images/squish.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">GAME &nbsp; OVER</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="closer">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mt-4" >
+      	<h4>PLayer1</h4><p class="result1"></p>
+      	<hr>
+      	<h4>PLayer2</h4><p class="result2"></p>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
 
 <script type="text/javascript"  src="assets/javascript/app.js"></script>
 <script type="text/javascript"  src="assets/javascript/firebase.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 </body>
 </html>

@@ -83,6 +83,10 @@ $("#button2").on("click", function(event) {
       
       }});
 
+$('.closer').on('click', function () {
+  $('#myInput').trigger('focus')
+})
+
 
 
 
