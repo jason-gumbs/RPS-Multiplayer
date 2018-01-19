@@ -14,9 +14,12 @@ $(".choice").on("click", function(event) {
       // Prevent the page from refreshing
       event.preventDefault();
 		// Get inputs
+    $(".choice, .top_image1").hide();
 		new Audio('assets/images/blop.mp3').play()
 
+
        userGuess = $(this).attr('value');
+
        database.ref('players/name/player1').push({
         userGuess: userGuess,
         //wins: wins,
@@ -38,26 +41,40 @@ $(".choice").on("click", function(event) {
    		if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
         if ((userGuess === "r") && (computerGuess === "s")) {
           wins1++;
+          $(".choice, .top_image1").show();
+          database.ref('players/name/player2').remove();
           $(".totalwin1").text(wins1)
         } else if ((userGuess === "r") && (computerGuess === "p")) {
           losses1++;
+         $(".choice, .top_image1").show();
           $(".totallose1").text(losses1)
+          database.ref('players/name/player2').remove();
         } else if ((userGuess === "s") && (computerGuess === "r")) {
           losses1++;
+          $(".choice, .top_image1").show();
           $(".totallose1").text(losses1)
+          database.ref('players/name/player2').remove();
         } else if ((userGuess === "s") && (computerGuess === "p")) {
           wins1++;
+          $(".choice, .top_image1").show();
           $(".totalwin1").text(wins1)
+          database.ref('players/name/player2').remove();
         } else if ((userGuess === "p") && (computerGuess === "r")) {
           wins1++;
+          $(".choice, .top_image1").show();
           $(".totalwin1").text(wins1)
+          database.ref('players/name/player2').remove();
         } else if ((userGuess === "p") && (computerGuess === "s")) {
           losses1++;
+          $(".choice, .top_image1").show();
           $(".totallose1").text(losses1)
+          database.ref('players/name/player2').remove();
         } else if (userGuess === computerGuess) {
         	console.log("hey");
           ties1++;
+          $(".choice, .top_image1").show();
           $(" .totaltie1").text(ties1)
+          database.ref('players/name/player2').remove();
         }}
 
         if (wins1 == 5){
@@ -109,26 +126,33 @@ $(".choice").on("click", function(event) {
    		if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
         if ((userGuess === "r") && (computerGuess === "s")) {
           wins++;
-          //$(".totalwin").text(wins)
+          database.ref('players/name/player1').remove();
+          $(".totalwin").text(wins)
         } else if ((userGuess === "r") && (computerGuess === "p")) {
           losses++;
           $(".totallose").text(losses)
+          database.ref('players/name/player1').remove();
         } else if ((userGuess === "s") && (computerGuess === "r")) {
           losses++;
           $(".totallose").text(losses)
+          database.ref('players/name/player1').remove();
         } else if ((userGuess === "s") && (computerGuess === "p")) {
           wins++;
           $(".totalwin").text(wins)
+          database.ref('players/name/player1').remove();
         } else if ((userGuess === "p") && (computerGuess === "r")) {
           wins++;
           $(".totalwin").text(wins)
+          database.ref('players/name/player1').remove();
         } else if ((userGuess === "p") && (computerGuess === "s")) {
           losses++;
           $(".totallose").text(losses)
+          database.ref('players/name/player1').remove();
         } else if (userGuess === computerGuess) {
         	console.log("hey");
           ties++;
           $(".totaltie").text(ties)
+          database.ref('players/name/player1').remove();
         }}
 
         if (wins == 5){
