@@ -46,7 +46,6 @@ $("#button").on("click", function(event) {
       database.ref('players/name').push ({
 				
 				player1: name,
-				key: key,
 				dateAdded: firebase.database.ServerValue.TIMESTAMP
 			}) 
 		
@@ -73,15 +72,10 @@ $("#button2").on("click", function(event) {
  		// Change what is saved in firebase
    
       database.ref('players/name').push ({
-				
 				player2: name2,
-				key: key,
 				dateAdded: firebase.database.ServerValue.TIMESTAMP
 			}) 
-		
-      
-      
-      }});
+		}});
 
 $('.closer').on('click', function () {
   $('#myInput').trigger('focus')
