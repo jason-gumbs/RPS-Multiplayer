@@ -1,16 +1,10 @@
-var wins1 = 0;
 var losses1 = 0;
 var ties1 = 0;
+var wins1 = 0;
 var wins = 0;
 var losses = 0;
 var ties = 0;
-var userGuess ="";
-var computerGuess; 
-  var key1 = 1;
-
-
-
-$(".choice").on("click", function(event) {
+$(document).off('click', '.choice').on("click",'.choice', function(event) {
       // Prevent the page from refreshing
       event.preventDefault();
 		// Get inputs
@@ -38,33 +32,33 @@ $(".choice").on("click", function(event) {
    				//__________________________________///////
    		//here is the gameplay syntax it determines if you win lose or tied
 		
-   		if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
-        if ((userGuess === "r") && (computerGuess === "s")) {
+   		
+        if ((computerGuess === "s") && (userGuess === "r")) {
           wins1++;
           $(".choice, .top_image1").show();
           database.ref('players/name/player2').remove();
           $(".totalwin1").text(wins1)
-        } else if ((userGuess === "r") && (computerGuess === "p")) {
+        } else if ( (computerGuess === "p")&&(userGuess === "r") ) {
           losses1++;
          $(".choice, .top_image1").show();
           $(".totallose1").text(losses1)
           database.ref('players/name/player2').remove();
-        } else if ((userGuess === "s") && (computerGuess === "r")) {
+        } else if ((computerGuess === "r")&&(userGuess === "s")) {
           losses1++;
           $(".choice, .top_image1").show();
           $(".totallose1").text(losses1)
           database.ref('players/name/player2').remove();
-        } else if ((userGuess === "s") && (computerGuess === "p")) {
+        } else if ((computerGuess === "p")&&(userGuess === "s")) {
           wins1++;
           $(".choice, .top_image1").show();
           $(".totalwin1").text(wins1)
           database.ref('players/name/player2').remove();
-        } else if ((userGuess === "p") && (computerGuess === "r")) {
+        } else if ( (computerGuess === "r") && (userGuess === "p")) {
           wins1++;
           $(".choice, .top_image1").show();
           $(".totalwin1").text(wins1)
           database.ref('players/name/player2').remove();
-        } else if ((userGuess === "p") && (computerGuess === "s")) {
+        } else if ( (computerGuess === "s") && (userGuess === "p")) {
           losses1++;
           $(".choice, .top_image1").show();
           $(".totallose1").text(losses1)
@@ -75,9 +69,9 @@ $(".choice").on("click", function(event) {
           $(".choice, .top_image1").show();
           $(" .totaltie1").text(ties1)
           database.ref('players/name/player2').remove();
-        }}
+        }
 
-        if (wins1 == 5){
+        if (wins1 === 5){
         	//database.ref().remove();
         	//location.reload();
         
@@ -87,8 +81,8 @@ $(".choice").on("click", function(event) {
         	$(".result1").text("YOU WIN!!!!!!");
         	$(".result2").text("YOU LOSE!!!!!!");
         	
-        	}
-
+        	
+}
 
      
 // Handle the errors
@@ -98,15 +92,17 @@ $(".choice").on("click", function(event) {
 });
    //-------------------------------------------------------------------//
    //-----------------------------------------------------------------//
-        $(".choice2").on("click", function(event) {
+       $(document).off('click', '.choice2').on("click",'.choice2', function(event) {
       // Prevent the page from refreshing
       event.preventDefault();
       $(".choice2, .top_image2").hide();
       new Audio('assets/images/blop.mp3').play()
 		// Get inputs
 		computerGuess = $(this).attr('value');
+		console.log(computerGuess);
+
        database.ref('players/name/player2').push({
-        computerGuess: computerGuess,
+        computerGuess: computerGuess
         //wins: wins,
         //losses: losses,
         //ties: ties,
@@ -124,7 +120,7 @@ $(".choice").on("click", function(event) {
    		//__________________________________///////
    		//here is the gameplay syntax it determines if you win lose or tied
 
-   		if ((computerGuess === "r") || (computerGuess === "p") || (computerGuess === "s")) {
+   		
         if ((userGuess === "s") && (computerGuess === "r")) {
           wins++;
           $(".choice2, .top_image2").show();
@@ -157,7 +153,7 @@ $(".choice").on("click", function(event) {
           $(".totallose").text(losses)
           database.ref('players/name/player1').remove();
            $(".choice2, .top_image2").show();
-        } else if (userGuess === computerGuess) {
+        } else if (userGuess === computerGuess ) {
         	console.log("hey");
           ties++;
           $(".totaltie").text(ties)
@@ -165,9 +161,9 @@ $(".choice").on("click", function(event) {
           database.ref('players/name/player1').remove();
           
 
-        }}
+        }
 
-        if (wins == 5){
+        if (wins === 5){
         	//database.ref().remove();
         	//location.reload();
         
