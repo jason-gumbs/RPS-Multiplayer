@@ -20,7 +20,7 @@ body {
   #score{
  	height: 500px;
  	width: 200px;
- 	margin-left: 1100px;
+ 	margin-left: 800px;
  	background-color: pink;
  	
  	position: absolute;
@@ -29,7 +29,7 @@ body {
 
  }
  .con{
- 	margin-left: 800px;
+ 	margin-left: 500px;
  }
  .score{
  	margin-left: 1000px;
