@@ -28,6 +28,14 @@ body {
  	top: 150px;
 
  }
+   .chat{
+    height: 500px;
+    width: 400px;
+    position: absolute;
+    left: 700px;
+    top: 0px;
+
+ }
  .con{
  	margin-left: 500px;
  }
